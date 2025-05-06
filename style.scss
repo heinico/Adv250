@@ -1,0 +1,545 @@
+/*
+Theme Name: ADV250
+Author: Nico Heinimäki
+Author URL: http://advisori.org
+Description: Theme is made by myself.
+Version: 0.0001
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+$blue: #454454;
+$lgrey: #f0f0f0;
+$dgrey: #2d2d2d;
+$red: #890010;
+$orange: #ff9c00;
+$white: #ffffff;
+
+
+$padding: 30px 0px 30px 0px;
+$tborder: blue solid 2px;
+
+
+@mixin rotate($rotsale: rotate(-30deg)) {
+	-webkit-transform: $rotsale;
+  -moz-transform: $rotsale;
+  -ms-transform: $rotsale;
+	-o-transform: $rotsale;
+	transform: $rotsale;
+}
+@mixin haive($haive: 0.3s ease) {
+-webkit-transition:$haive;
+-moz-transition: $haive;
+-o-transition: $haive;
+-ms-transition: $haive;
+transition: $haive;
+}
+*{
+	margin: 0px;
+	padding: 0px;
+
+	    header, footer, aside, nav, article {
+	    display: block;
+      }
+}
+
+body {
+  background: $dgrey;
+}
+
+h1 {
+  color: $dgrey;
+  font-family: Oswald;
+}
+
+a {
+  color: $dgrey;
+  font-family: Arial;
+  font-size: 14px;
+	@include haive;
+	&:hover {
+	@include haive;
+  color: $orange;
+	text-decoration: none;
+	}
+}
+p {
+  color: $dgrey;
+  font-family: Arial;
+  font-size: 14px;
+	line-height: 200%;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+.teksti {
+  color: $dgrey;
+  font-family: Oswald;
+  font-size: 30px;
+}
+
+header {
+  background: $dgrey;
+  width: 100%;
+  padding: $padding;
+  text-align: center;
+	margin: 0 auto;
+	#advlogo {
+		float:left;
+		margin-left: 100px;
+		img {
+		height: 50px;
+		}
+	}
+
+nav {
+	max-width: 960px;
+	padding: $padding;
+  margin: 0 auto;
+	ul li {
+		list-style: none;
+		a {
+			font-size: 20px;
+			color: $white;
+			display: block;
+			float:left;
+				text-decoration: none;
+			margin: 0px 10px 0px 10px;
+			&:hover {
+				text-decoration: underline;
+				color: $orange;
+			}
+		}
+	}
+}
+	a.cart-contents {
+		float:right;
+		color: $white;
+		font-size: 20px;
+		text-decoration: none;
+		&:hover {
+		text-decoration: underline;
+		}
+	}
+	.valikkoPos {
+		display: none;
+	}
+}
+#wrapper {
+	background: $lgrey;
+}
+#main {
+	padding: $padding;
+	max-width: 950px;
+  text-align: left;
+ 	margin: 0 auto;
+/*	border: $tborder;*/
+}
+
+footer {
+  background: $dgrey;
+  width: 100%;
+  padding: $padding;
+  text-align: center;
+	h3 {
+		color: $white;
+		font-size: 16px;
+		font-family: Oswald;
+	}
+}
+#blogi {
+		text-align: center;
+}
+//*******************************************************
+//WOOCOMMERCE-CSS-tiedot!
+//*******************************************************
+#vk {
+	padding: $padding;
+	max-width: 950px;
+  text-align: left;
+ 	margin: 0 auto;
+	.woocommerce-result-count {
+	color: $red;
+	}
+	.woocommerce-ordering {
+		padding: $padding;
+		.orderby {}
+	}
+	ul.products li {
+		list-style: none;
+		display: inline-block;
+		//border:$tborder;
+		max-width: 400px;
+		padding: 40px;
+		img {
+			//border: $tborder;
+		}
+		a {
+		margin: 0px;
+		text-decoration: none;
+		h3 {
+			color: $dgrey;
+			padding: 0px;
+		}
+		}
+	.price {
+		display: block;
+		line-height: 300%;
+		color: $dgrey;
+		font-weight: bolder;
+		text-decoration: none;
+		font-size: 30px;
+	}
+	.add_to_cart_button, .product_type_simple {
+		padding: 20px;
+		color: $dgrey;
+		border: 1px $dgrey solid;
+		text-decoration: none;
+		@include haive;
+		&:hover {
+			@include haive;
+			background: $dgrey;
+			color: $orange;
+		}
+	}
+ }
+ .woocommerce-result-count {
+		color: $dgrey;
+ }
+ .woocommerce-ordering {
+ }
+
+ .star-rating {
+	 width:80px;
+	 height:16px;
+	 background:url(img/star.png) repeat-x left 0;
+	 span{
+	 background:url(img/star.png) repeat-x left -32px;
+	 height:0;
+	 padding-top:16px;
+	 overflow:hidden;
+	 float:left;
+	 }
+ }
+.hreview-aggregate .star-rating {
+	margin:10px 0 0 0;
+}
+#review_form #respond{position:static;margin:0;width:auto;padding:0 0 0;background:transparent none;border:0}
+#review_form #respond:after{content:"";display:block;clear:both}
+#review_form #respond p{margin:0 0 10px}
+#review_form #respond .form-submit input{left:auto}
+#review_form #respond textarea{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;width:100%}
+p.stars:after{content:"";display:block;clear:both}
+p.stars span{width:80px;height:16px;position:relative;float:left;background:url(img/star.png) repeat-x left 0}
+p.stars span a{float:left;position:absolute;left:0;top:0;width:16px;height:0;padding-top:16px;overflow:hidden}
+p.stars span a:hover,p.stars span a:focus{background:url(img/star.png) repeat-x left -16px}
+p.stars span a.active{background:url(images/star.png) repeat-x left -32px}
+p.stars span a.star-1{width:16px;z-index:10}
+p.stars span a.star-2{width:32px;z-index:9}
+p.stars span a.star-3{width:48px;z-index:8}
+p.stars span a.star-4{width:64px;z-index:7}
+p.stars span a.star-5{width:80px;z-index:6}
+	ul.page-numbers {
+		padding: 20px;
+		list-style: none;
+	.prev, .next {
+		text-decoration: none;
+	}
+	.page-numbers {
+		padding: 5px;
+		float:left;
+		color: $dgrey;
+		font-size: 20px;
+		font-family: Oswald;
+
+	}
+}
+//*******************************************************
+//WOOCOMMERCE-tuotesivu
+//*******************************************************
+.product {
+	padding: 30px;
+	img {
+	text-align: center;
+	}
+	.onsale {
+	@include rotate;
+	color: $orange;
+	position: absolute;
+	font-weight: bold;
+	text-align: left;
+	border: 2px solid $orange;
+	border-radius: 50%;
+	padding: 0px 30px 0px 30px;
+	background: $dgrey;
+	font-size: 20px;
+	}
+	ul.tabs li {
+		list-style: none;
+			a {
+				display: block;
+				float:left;
+			  margin: 10px;
+				@include haive;
+				&:hover {
+				@include haive;
+				color: $dgrey;
+				text-decoration: none;
+				}
+			}
+	}
+	ol.commentlist li {
+		list-style: none;
+		padding: $padding;
+	}
+	.panel  {
+		padding: 50px 0px 50px 0px;
+		font-family: Oswald;
+	}
+	.related {
+		padding: 50px 0px 50px 0px;
+		font-family: Oswald;
+	ul li {
+		max-width: 140px;
+		.add_to_cart_button {
+			padding: 5px;
+		}
+		h3 {
+			font-size: 12px;
+		}
+		.woocommerce-Price-amount {
+			font-size: 18px;
+			//display: inline-block;
+		}
+		.price {
+			line-height: 100%;
+		}
+		.onsale {
+		border: 1px solid $dgrey;
+		padding: 0px 10px 0px 10px;
+		font-size: 12px;
+		}
+		}
+	}
+}
+}
+.cart-collaterals .cross-sells, .up-sells {
+    display: none !important;
+}
+
+//*******************************************************
+//WOOCOMMERCE-checkout
+//*******************************************************
+.woocommerce {
+	h1, h2, h3, h4, h5, h6 {
+	font-family: Oswald;
+	}
+}
+#customer_details {
+
+	.input-text {
+		padding: 10px;
+	}
+	#order_comments {
+		height: 150px;
+		resize: vertical;
+	}
+}
+#order_review_heading {
+	font-family: Oswald;
+	padding: $padding;
+}
+#order_review {
+	font-family: Oswald;
+}
+//*******************************************************
+//WOOCOMMERCE-checkout order received
+//*******************************************************
+.order_details, .shop_table, address {
+	font-family: Arial;
+}
+address {
+	padding: 20px;
+}
+.woocommerce {
+	header {
+		background: transparent;
+	}
+	nav ul {
+		list-style: none;
+	}
+	input.button {
+		@include haive;
+		&:hover {
+		@include haive;
+		}
+	}
+
+}
+button.button {
+	margin: $padding;
+	font-size: 20px;
+	cursor: pointer;
+	border: 2px solid $dgrey;
+	padding: 5px;
+	@include haive;
+	&:hover {
+		@include haive;
+		color: $orange;
+		background: $dgrey;
+	}
+}
+.woocommerce-thankyou-order-received {
+	font-weight: bold;
+}
+//*******************************************************
+//WOOCOMMERCE-etusivun arvostetuimmat tuotteet
+//*******************************************************
+#main #vk {
+	h1 {
+		text-align: center;
+	}
+	ul {
+		list-style: none;
+		li {
+			display: inline-block;
+			padding: 20px;
+			a {
+				text-decoration: none;
+			}
+			.product-title {
+			font-size: 20px;
+			font-family: Oswald;
+			display: block;
+			}
+			.woocommerce-Price-amount {
+				font-size: 15px;
+				font-family: Oswald;
+			}
+		}
+	}
+}
+//*******************************************************
+//RESPONSIVE MEEEEEEEEEENU
+//*******************************************************
+.border-menu {
+	position: absolute;
+	float: right;
+	top: 90px;
+	right: 90px;
+	cursor: pointer;
+	padding: 10px 35px 16px 0px;
+	span, span:before, span:after {
+	  	border-radius: 1px;
+	  	height: 5px;
+	  	width: 35px;
+	  	background: $orange;
+	  	position: absolute;
+	  	display: block;
+	  	content: '';
+	  	transition: all 300ms ease-in-out;
+	}
+	a {
+		@include haive;
+		&:hover {
+		@include haive;
+		}
+	}
+	span:before {
+	  top: -10px;
+	}
+	span:after {
+		bottom: -10px;
+	}
+}
+	.border-menu.active span {
+	  background-color: transparent;
+	}
+	.border-menu.active span:before, .border-menu.active span:after {
+	  top: 0;
+	}
+	.border-menu.active span:before {
+	  transform: rotate(45deg);
+	  	background: #fff;
+	}
+	.border-menu.active span:after {
+	  transform: rotate(-45deg);
+	  	background: #fff;
+	}
+.valikkoPos {
+float: right;
+height: 50px;
+a {
+	color: $orange;
+}
+}
+.resValikko {
+display: none;
+position: relative;
+	background-color: $dgrey;
+float: left;
+height: 50px;
+width: 100%;
+padding-top: 50px;
+padding-bottom: 50px;
+
+}
+
+//*******************************************************
+//RESPONSIVE
+//*******************************************************
+@media (max-width: 1280px)  {
+header #advlogo {
+		margin-left: 30px;
+	}
+}
+@media (max-width: 768px)  {
+.products {
+	margin: 0 auto;
+	text-align: center;
+	.star-rating {
+		margin: 0 auto;
+		}
+	}
+.paaNavi {
+	display: none;
+}
+header {
+#advlogo {
+	float:left;
+	margin: 0 auto;
+	padding: 0px 50px 0px 50px;
+}
+nav .valikkoPos {
+	display: block;
+	float: right;
+	padding: 0px 50px 0px 50px;
+	}
+ }
+#main, #vk {
+	padding: 30px;
+	margin: 0 auto;
+	text-align: left;
+}
+}
+@media (max-width: 480px)  {
+	header #advlogo {
+		padding: 0px 20px 0px 20px;
+	}
+	.border-menu {
+		right: 50px;
+	}
+}
+@media (max-width: 320px)  {
+	#main, #vk {
+		padding: 15px;
+	}
+	header {
+	nav .valikkoPos {
+		padding: 0px 20px 0px 20px;
+	}
+ }
+ .coupon {
+	 font-size: 14px;
+ }
+}
