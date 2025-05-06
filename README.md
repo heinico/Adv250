@@ -1,2 +1,2 @@
 # Adv250
-Code rep testing
+My first customized Woocommerce theme. Prototype version.
